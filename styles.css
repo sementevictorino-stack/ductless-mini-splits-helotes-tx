@@ -1,0 +1,187 @@
+/*
+  styles.css for Ductless Mini Splits Helotes, TX
+  Colors: Purple #1a0033, Yellow #FFD700, White, Deep Red for CTA
+  Font: Montserrat
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  color: #1a0033;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #1a0033;
+  color: #FFD700;
+  padding: 0;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+}
+nav a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #fff;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a0033 70%, #FFD700 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5vw 10vw 5vw 10vw;
+  position: relative;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+.cta-btn {
+  background: #b3001b;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 4px 16px rgba(26,0,51,0.12);
+}
+.cta-btn:hover {
+  background: #FFD700;
+  color: #1a0033;
+}
+
+.floating-cta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #b3001b;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(26,0,51,0.18);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: background 0.2s;
+}
+.floating-cta:hover {
+  background: #FFD700;
+  color: #1a0033;
+}
+
+section {
+  padding: 5vw 10vw;
+  background: #fff;
+}
+section:nth-child(even) {
+  background: #f7f3ff;
+}
+
+h2 {
+  color: #1a0033;
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.services-list, .water-heater-list, .specialized-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.services-list li, .water-heater-list li, .specialized-list li {
+  background: #fff;
+  border: 1px solid #e0d6f7;
+  border-radius: 16px;
+  padding: 1.2rem 1rem;
+  color: #1a0033;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(26,0,51,0.04);
+}
+
+.review {
+  background: #fff;
+  border-left: 6px solid #FFD700;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  color: #1a0033;
+  box-shadow: 0 2px 8px rgba(26,0,51,0.04);
+}
+.review .reviewer {
+  font-weight: 700;
+  color: #b3001b;
+}
+
+.trust-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.trust-signals .signal {
+  background: #FFD700;
+  color: #1a0033;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(26,0,51,0.08);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 8vw 4vw;
+  }
+  section {
+    padding: 8vw 4vw;
+  }
+}
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .cta-btn, .floating-cta {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+  .services-list, .water-heater-list, .specialized-list {
+    grid-template-columns: 1fr;
+  }
+}
